@@ -1,0 +1,4 @@
+node_modules
+*.log
+registry/miriam.ttl
+registry/*.old

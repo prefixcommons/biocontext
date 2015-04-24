@@ -1,17 +1,96 @@
 ## BioContext: JSON-LD Contexts for Bioinformatics Data
 
-The goal is to provide a modular set of JSON-LD contexts for mapping
-abbreviated names of biological objects onto URIs.
+The goal is to provide a modular set of [JSON-LD](http://json-ld.org/)
+contexts for mapping abbreviated names of biological objects onto
+URIs. Here, "abbreviated name" usually means a
+[CURIE](https://en.wikipedia.org/wiki/CURIE) but optionally
+human-friendly symbolic names can also be added.
+
+A CURIE is a bipartite identifier separated by a ':', in which the
+prefix is an abbreviation for a URI prefix.
+
+Note that you don't need to be using JSON-LD to find this
+useful. There are many situations where it's necessary to translate a
+bioinformatics ID to URI for use in the semantic web stack. This
+includes the [SciGraph](https://github.com/SciGraph/SciGraph) Neo4j
+application as well as triplestores, OWL tooling etc.
 
 For example:
 
- * Ontology classes
+ * Ontology class CURIEs
     * CHEBI:26619 ==> http://purl.obolibrary.org/obo/CHEBI_26619
     * UBERON:0001685 ==> http://purl.obolibrary.org/obo/UBERON_0001685
     * NCBITaxon:9606 ==> http://purl.obolibrary.org/obo/NCBITaxon_9606
- * Databases
+ * Databases CURIEs
     * ENSEMBL:ENSG00000123374 ==> http://identifiers.org/ensembl/ENSG00000123374
     * FlyBase:FBgn0011293 ==> http://identifiers.org/flybase/FBgn0011293
- * Metadata
-    * xsd:Int ==> http://www.w3.org/2001/XMLSchema#
+ * Metadata CURIEs
+    * xsd:Int ==> http://www.w3.org/2001/XMLSchema#Int
     * owl:Class ==> http://www.w3.org/2002/07/owl#Class
+    * foaf:is_about ==> http://xmlns.com/foaf/0.1/is_about
+ * Abbreviated non-CURIE names
+    * is_about ==> http://xmlns.com/foaf/0.1/is_about
+    * part_of ==> http://purl.obolibrary.org/obo/BFO_0000050
+
+The contexts are modular and remixable; for example, if you want to
+use the OBO Library purls for ontology class CURIEs you can reference
+obo_context.json, but you are free to ignore the commitment to map
+ENSMEBL etc to identifiers.org URIs.
+
+## Organization
+
+The project is organized as a set of JSON-LD context files in the
+[registry/](registry) directory. The current set is preliminary and
+unstable.
+
+## Use in JSON-LD documents
+
+You can simply copy the portions of the contexts files here to use in
+your own JSON-LD documents.
+
+When this project is more stable, you can reference any of the
+contexts over the web.
+
+For testing purposes you can do this for now:
+
+```
+ {
+   "@context", "https://raw.githubusercontent.com/cmungall/biocontext/master/registry/obo_context.jsonld"
+   ...
+```
+
+*but this is not stable*
+
+## Remixing your own contexts
+
+TODO - provide links to JSON-LD scripts
+
+## Philosophy
+
+When mapping an OBO-style ID there is no ambiguity as to what to map
+to, obolibrary purls are mandated.
+
+However, when presented with something like OMIM:123 or
+ENSEMBL:ENSG00000123374, what should the interpretation of these be in
+a corresponding semantic web stack? Are these information artefacts
+*about* a biological entity, or are they biological entities
+themselves? If they are biological entities, is a gene an individual or
+a class?
+
+This registry provides a pluralistic approach. The default is to map a
+database ID to an identifiers.org URI, which makes no ontological
+commitments to the nature of the entity. This does not preclude the
+possibility of including separate mappings to ontologically committed
+OWL objects.
+
+Note this is already built in to some extent with some databases such
+as the NCBITaxonomy. The OBO Library uses the NCBITaxon prefix for a
+class-based mirror of the ncbi taxonomy database.
+
+## What this does not do
+
+The scope of biocontext is limited to mapping of prefixes and short
+names to URIs. It is not a general purpose registry. It stores no
+metadata about the prefixes used. It reuses information from other
+registries such as identifiers.org and the OBO library when possible.
+

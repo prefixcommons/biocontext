@@ -1,0 +1,54 @@
+{
+  "@context" : [
+  "https://raw.githubusercontent.com/cmungall/biocontext/master/registry/uber_context.jsonld",
+  {
+    "OBAN" : "http://purl.org/OBAN/",
+    "evidence" : {
+      "@id" : "http://purl.org/dc/elements/1.1/evidence",
+      "@type" : "@id"
+    },
+    "source" : {
+      "@id" : "http://purl.org/dc/elements/1.1/source",
+      "@type" : "@id"
+    },
+    "hasObject" : {
+      "@id" : "http://purl.org/OBAN/hasObject",
+      "@type" : "@id"
+    },
+    "hasPredicate" : {
+      "@id" : "http://purl.org/OBAN/hasPredicate",
+      "@type" : "@id"
+    },
+    "hasSubject" : {
+      "@id" : "http://purl.org/OBAN/hasSubject",
+      "@type" : "@id"
+    },
+    "" : "http://example.org/"
+  }
+],
+  "@graph": [
+  {
+    "@id" : ":00004cfcc3069205e1577ac5b3d9885a",
+    "@type" : "OBAN:Annotation",
+    "evidence" : "ECO:0000304",
+    "source" : "Orphanet:220",
+    "hasObject" : "HP:0000093",
+    "hasPredicate" : "RO:0002200",
+    "hasSubject" : "OMIM:194080"
+  }, {
+    "@id" : ":00005167dd8a24c72460135105453313",
+    "@type" : "OBAN:Annotation",
+    "evidence" : "ECO:0000269",
+    "source" : "PMID:19659750",
+    "hasObject" : "HP:0000544",
+    "hasPredicate" : "RO:0002200",
+    "hasSubject" : "OMIM:109150"
+  }, {
+    "@id" : ":00006d6903f6f9ae3f616bc46ba5d630",
+    "@type" : "OBAN:Annotation",
+    "evidence" : "ECO:0000501",
+    "source" : "OMIM:614078",
+    "hasObject" : "HP:0002857",
+    "hasPredicate" : "RO:0002200"
+  } ]
+}

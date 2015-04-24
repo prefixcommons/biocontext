@@ -2,23 +2,25 @@
 
 The goal is to provide a modular set of [JSON-LD](http://json-ld.org/)
 contexts for mapping abbreviated names of biological objects onto URIs
-for use in semantic tools. Here, "abbreviated name" usually means a
-[CURIE](https://en.wikipedia.org/wiki/CURIE) but optionally
-human-friendly symbolic names can also be used as abbrevations for
-complete URIs.
+for use in semantic tool chains. Here, "abbreviated name" usually
+means a [CURIE](https://en.wikipedia.org/wiki/CURIE) but optionally
+human-friendly symbolic names (e.g. `gene`) can also be used as
+abbrevations for complete URIs (although this is more dangerous).
 
-A CURIE is a bipartite identifier separated by a ':', in which the
-prefix is an abbreviation for a URI prefix. CURIEs in JSON-LD
-documents are expanded to URIs, given a mapping within a `@context`
-object.
+A CURIE is a bipartite identifier of the form `Prefix:LocalID`, in
+which the prefix is a convenient abbreviation of a URI prefix. CURIEs
+in JSON-LD documents are expanded to URIs, if that prefix is defined
+in a `@context` object.
 
 Note that you don't need to be using JSON-LD to find this
 useful. There are many situations where it's necessary to translate a
 bioinformatics ID to URI for use in the semantic web stack. This
 includes the [SciGraph](https://github.com/SciGraph/SciGraph) Neo4j
-application as well as triplestores, OWL tooling (ROBOT) etc.
+application as well as triplestores, OWL tooling (ROBOT), standard
+prefixes for SPARQL queries, etc.
 
-For example:
+Here are some examples of expansions from abbreviated names to URIs
+using these contexts:
 
  * Ontology class CURIEs
     * GO:0006915 ==> http://purl.obolibrary.org/obo/GO_0006915
@@ -44,9 +46,9 @@ For example:
     * Association ==> http://semanticscience.org/resource/SIO_000897
 
 The contexts are modular and remixable; for example, if you want to
-use the OBO Library purls for ontology class CURIEs you can reference
-obo_context.json, but you are free to ignore the commitment to map
-ENSMEBL etc to identifiers.org URIs.
+use the [OBO Library](http://obofoundry.org) purls for ontology class
+CURIEs you can reference [obo_context.json](registry/obo_context.jsonld), but you are free to ignore
+the commitment to map ENSMEBL etc to `identifiers.org` URIs.
 
 ## Organization
 
@@ -64,6 +66,7 @@ The current list is:
  * [idot](registry/idot_context.jsonld) : derived from identifiers-org/MIRIAM registry
  * [idot_nr](registry/idot_nr_context.jsonld) : idot minus OBO
  * [semweb](registry/semweb_context.jsonld) : Standard semantic web prefixes
+ * [uber](registry/uber_context.jsonld) : Merger of other contexts
 
 ## Use in JSON-LD documents
 
@@ -82,6 +85,10 @@ For testing purposes you can do this for now:
 ```
 
 *but this is not stable*
+
+## Examples
+
+TODO
 
 ## Remixing your own contexts
 

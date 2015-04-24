@@ -1,0 +1,72 @@
+# base
+'': 'http://www.monarchinitiative.org/'
+'MONARCH': 'http://www.monarchinitiative.org/MONARCH_'
+
+
+# publication/reference sources
+'PMID': 'http://www.ncbi.nlm.nih.gov/pubmed/'
+'PMCID' : 'http://www.ncbi.nlm.nih.gov/pmc/'
+'ISBN-10': 'http://www.monarchinitiative.org/ISBN10_'
+'ISBN-13': 'http://www.monarchinitiative.org/ISBN13_'
+'ISBN-15': 'http://www.monarchinitiative.org/ISBN15_'
+'ISBN': 'http://www.monarchinitiative.org/ISBN_'
+'DOI' : 'http://dx.doi.org/'
+'J' : 'http://www.informatics.jax.org/reference/J:'
+
+# other
+'Annotation': 'http://www.w3.org/ns/oa#Annotation'
+'HPO' : 'http://human-phenotype-ontology.org/'  #to be used for persons, though they don't resolve with this
+'PANTHER' : 'http://www.pantherdb.org/panther/family.do?clsAccession='   #protein/orthologous families
+'dbSNP' : 'http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs='
+'dbSNPIndividual' : 'http://www.ncbi.nlm.nih.gov/SNP/snp_ind.cgi?ind_id='  #FIXME
+'DrugBank' : 'http://www.drugbank.ca/drugs/'
+'GeneReviews' : 'http://www.ncbi.nlm.nih.gov/books/'
+'KEGG' : 'http://www.kegg.jp/dbget-bin/www_bget?path:map'
+'REACT' : 'http://www.reactome.org/content/detail/REACT_'
+'JAX' : 'http://jaxmice.jax.org/strain/'
+'EOM' : 'http://purl.obolibrary.org/obo/EOM_'
+'Coriell' : 'https://catalog.coriell.org/0/Sections/Search/Sample_Detail.aspx?Ref='
+'CoriellCollection' : 'https://catalog.coriell.org/1/'
+'CoriellFamily' : 'https://catalog.coriell.org/0/Sections/BrowseCatalog/FamilyTypeSubDetail.aspx?fam='
+'CoriellIndividual' : 'https://catalog.coriell.org/Search?q='
+'UCSC' : 'ftp://hgdownload.cse.ucsc.edu/goldenPath/'
+'NCBIGenome' : 'http://www.ncbi.nlm.nih.gov/genome/?term='
+'ClinVar' : 'http://www.ncbi.nlm.nih.gov/clinvar/'
+'ClinVarVariant' : 'http://www.ncbi.nlm.nih.gov/clinvar/variation/'
+'MedGen' : 'http://www.ncbi.nlm.nih.gov/medgen/'
+'dbVAR' : 'http://www.ncbi.nlm.nih.gov/dbvar/'
+'COSMIC' : 'http://cancer.sanger.ac.uk/cosmic/mutation/overview?id='
+'CCDS' : 'http://www.ncbi.nlm.nih.gov/CCDS/CcdsBrowse.cgi?REQUEST=CCDS&DATA='
+'CGD' : 'http://ohsu.edu/cgd/'
+
+# genes
+'NCBIGene' : 'http://www.ncbi.nlm.nih.gov/gene/'
+'HGNC' : 'http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=HGNC:'
+'HPRD' : 'http://www.hprd.org/protein/'
+'ENSEMBL' : 'http://identifiers.org/ENSEMBL:'
+'miRBase' : 'http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc='
+'MGI': 'http://www.informatics.jax.org/accession/MGI:'  #Note this will work for marker(gene), allele, and references, but not genotype
+'BIOGRID' : 'http://thebiogrid.org/'
+'RGD' : 'http://rgd.mcw.edu/rgdweb/report/gene/main.html?id='
+'ZFIN' : 'http://zfin.org/'
+'dictyBase' : 'http://dictybase.org/gene/'
+'TAIR' : 'http://identifiers.org/TAIR:'
+'FlyBase' : 'http://identifiers.org/FB:'
+'PomBase' : 'http://identifiers.org/PomBase:'
+'WormBase' : 'http://identifiers.org/WormBase:'
+'SGD' : 'http://identifiers.org/SGD:'
+'RefSeq' : 'http://www.ncbi.nlm.nih.gov/refseq/?term='
+'IMPC' : 'http://www.mousephenotype.org/data/genes/'  #FIXME
+'GenBank' : 'http://www.ncbi.nlm.nih.gov/nuccore/'
+
+
+# proteins
+'UniProtKB' : 'http://identifiers.org/uniprot/'
+'SwissProt' : 'http://identifiers.org/SwissProt:'
+'TrEMBL' : 'http://www.uniprot.org/uniprot/'
+'PDB' : 'http://identifiers.org/PDB:'
+'NCBIProtein' : 'http://www.ncbi.nlm.nih.gov/protein/'
+'EC' : 'http://identifiers.org/EC:'  #FIXME: Enzyme Commission numbers. Any preferred url that can resolve this?
+
+#chemicals
+'CID' : 'http://pubchem.ncbi.nlm.nih.gov/compound/'

@@ -1,0 +1,11 @@
+## Shortcuts for RO
+
+"@context":
+  
+  obo: http://purl.obolibrary.org/obo/
+  RO: http://purl.obolibrary.org/obo/RO_
+  BFO: http://purl.obolibrary.org/obo/BFO_
+  
+  part_of: BFO:0000050
+
+  

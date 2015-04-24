@@ -1,0 +1,8 @@
+{
+   "@context" : {
+      "part_of" : "BFO:0000050",
+      "obo" : "http://purl.obolibrary.org/obo/",
+      "BFO" : "http://purl.obolibrary.org/obo/BFO_",
+      "RO" : "http://purl.obolibrary.org/obo/RO_"
+   }
+}

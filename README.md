@@ -13,7 +13,7 @@ Note that you don't need to be using JSON-LD to find this
 useful. There are many situations where it's necessary to translate a
 bioinformatics ID to URI for use in the semantic web stack. This
 includes the [SciGraph](https://github.com/SciGraph/SciGraph) Neo4j
-application as well as triplestores, OWL tooling etc.
+application as well as triplestores, OWL tooling (ROBOT) etc.
 
 For example:
 
@@ -24,13 +24,20 @@ For example:
  * Databases CURIEs
     * ENSEMBL:ENSG00000123374 ==> http://identifiers.org/ensembl/ENSG00000123374
     * FlyBase:FBgn0011293 ==> http://identifiers.org/flybase/FBgn0011293
+ * Literature CURIEs
+    * PMID:16516152 ==> http://www.ncbi.nlm.nih.gov/pubmed/16516152
+    * PMCID:PMC3178059 ==> http://www.ncbi.nlm.nih.gov/pmc/articles/PMC3178059
+    * DOI:10.1371/journal.pone.0015506 ==> http://dx.doi.org/10.1371/journal.pone.0015506
  * Metadata CURIEs
+    * dc:title ==> http://purl.org/dc/terms/title
     * xsd:Int ==> http://www.w3.org/2001/XMLSchema#Int
     * owl:Class ==> http://www.w3.org/2002/07/owl#Class
     * foaf:is_about ==> http://xmlns.com/foaf/0.1/is_about
  * Abbreviated non-CURIE names
     * is_about ==> http://xmlns.com/foaf/0.1/is_about
     * part_of ==> http://purl.obolibrary.org/obo/BFO_0000050
+    * assay ==> http://purl.obolibrary.org/obo/OBI_0000070
+    * Association ==> http://semanticscience.org/resource/SIO_000897
 
 The contexts are modular and remixable; for example, if you want to
 use the OBO Library purls for ontology class CURIEs you can reference
@@ -42,6 +49,17 @@ ENSMEBL etc to identifiers.org URIs.
 The project is organized as a set of JSON-LD context files in the
 [registry/](registry) directory. The current set is preliminary and
 unstable.
+
+Different contexts can be concatenated together. Warning: there is a
+possibility that combinations can confict. See the scripts in
+[bin](bin/) for concatenating and subtracting.
+
+The current list is:
+
+ * [obo](registry/obo_context.jsonld) : derived from the OBO registry
+ * [idot](registry/idot_context.jsonld) : derived from identifiers-org/MIRIAM registry
+ * [idot_nr](registry/idot_nr_context.jsonld) : idot minus OBO
+ * [semweb](registry/semweb_context.jsonld) : Standard semantic web prefixes
 
 ## Use in JSON-LD documents
 

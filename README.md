@@ -1,13 +1,16 @@
 ## BioContext: JSON-LD Contexts for Bioinformatics Data
 
 The goal is to provide a modular set of [JSON-LD](http://json-ld.org/)
-contexts for mapping abbreviated names of biological objects onto
-URIs. Here, "abbreviated name" usually means a
+contexts for mapping abbreviated names of biological objects onto URIs
+for use in semantic tools. Here, "abbreviated name" usually means a
 [CURIE](https://en.wikipedia.org/wiki/CURIE) but optionally
-human-friendly symbolic names can also be added.
+human-friendly symbolic names can also be used as abbrevations for
+complete URIs.
 
 A CURIE is a bipartite identifier separated by a ':', in which the
-prefix is an abbreviation for a URI prefix.
+prefix is an abbreviation for a URI prefix. CURIEs in JSON-LD
+documents are expanded to URIs, given a mapping within a `@context`
+object.
 
 Note that you don't need to be using JSON-LD to find this
 useful. There are many situations where it's necessary to translate a
@@ -18,6 +21,7 @@ application as well as triplestores, OWL tooling (ROBOT) etc.
 For example:
 
  * Ontology class CURIEs
+    * GO:0006915 ==> http://purl.obolibrary.org/obo/GO_0006915
     * CHEBI:26619 ==> http://purl.obolibrary.org/obo/CHEBI_26619
     * UBERON:0001685 ==> http://purl.obolibrary.org/obo/UBERON_0001685
     * NCBITaxon:9606 ==> http://purl.obolibrary.org/obo/NCBITaxon_9606
@@ -86,24 +90,32 @@ TODO - provide links to JSON-LD scripts
 ## Philosophy
 
 When mapping an OBO-style ID there is no ambiguity as to what to map
-to, obolibrary purls are mandated.
+to. The ID "CHEBI:26619" corresponds to the OWL class with IRI
+"http://purl.obolibrary.org/obo/CHEBI_26619". 
 
-However, when presented with something like OMIM:123 or
-ENSEMBL:ENSG00000123374, what should the interpretation of these be in
-a corresponding semantic web stack? Are these information artefacts
-*about* a biological entity, or are they biological entities
-themselves? If they are biological entities, is a gene an individual or
-a class?
+However, when presented with something like "OMIM:224050" or
+"ENSEMBL:ENSG00000123374", what should the interpretation of these be
+when we refer to them from within the semantic web? Are these
+information artefacts *about* a biological entity, or are they
+biological entities themselves? If they are biological entities, is a
+gene an individual or a class?
 
 This registry provides a pluralistic approach. The default is to map a
 database ID to an identifiers.org URI, which makes no ontological
 commitments to the nature of the entity. This does not preclude the
 possibility of including separate mappings to ontologically committed
-OWL objects.
+OWL objects. For example, one group may use to use CURIEs of the form
+"OMIM:224050" as an abbreviation for an OWL Class URI. There is no
+mandate in the semantic web that all groups must use the same
+CURIEs. However, to avoid confusion groups should in general
+coordinate for example through obo-discuss regarding different
+ontological interpretations of database objects.
 
 Note this is already built in to some extent with some databases such
 as the NCBITaxonomy. The OBO Library uses the NCBITaxon prefix for a
-class-based mirror of the ncbi taxonomy database.
+class-based mirror of the ncbi taxonomy database. For example
+"NCBITaxon:9606" is a shorthand for
+http://purl.obolibrary.org/obo/NCBITaxon_9606
 
 ## What this does not do
 
@@ -112,3 +124,8 @@ names to URIs. It is not a general purpose registry. It stores no
 metadata about the prefixes used. It reuses information from other
 registries such as identifiers.org and the OBO library when possible.
 
+## Contributing
+
+ * [new issue](issues/new)
+ * Fork, branch, make a pull request
+ * Edit any file directly via github web interface and make a pull request

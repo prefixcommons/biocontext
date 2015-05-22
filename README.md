@@ -13,7 +13,11 @@ in JSON-LD documents are expanded to URIs, if that prefix is defined
 in a `@context` object.
 
 Note that you don't need to be using JSON-LD to find this
-useful. There are many situations where it's necessary to translate a
+useful. Bipartite unique IDs are common in bioinformatics, and
+mandated in formats such as OBO (the most common way of consuming
+ontologies in bioinformatics toolchains).
+
+There are many situations where it's necessary to translate a
 bioinformatics ID to URI for use in the semantic web stack. This
 includes the [SciGraph](https://github.com/SciGraph/SciGraph) Neo4j
 application as well as triplestores, OWL tooling (ROBOT), standard

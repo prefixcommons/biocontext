@@ -2,7 +2,7 @@
 
 The goal is to provide a modular set of [JSON-LD](http://json-ld.org/)
 contexts for mapping abbreviated names of biological objects onto URIs
-for use in semantic tool chains. Here, "abbreviated name" usually
+for use in semantic web tool chains. Here, "abbreviated name" usually
 means a [CURIE](https://en.wikipedia.org/wiki/CURIE) but optionally
 human-friendly symbolic names (e.g. `gene`) can also be used as
 abbrevations for complete URIs (although this is more dangerous).

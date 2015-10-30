@@ -5,6 +5,8 @@ all: $(patsubst %,registry/%_context.jsonld,$(MODS))
 install:
 	pip install -r requirements.txt
 
+test: all
+
 ## OBO
 ## For now we just clone this from ROBOT; TODO - better way of syncing with OBO
 registry/obo_context.jsonld: ../owltools2-experimental/owltools2-core/src/main/resources/obo_context.jsonld

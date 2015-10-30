@@ -45,3 +45,4 @@ registry/miriam.ttl:
 
 registry/go-db-xrefs.json: ../go-site/metadata/db-xrefs.yaml
 	./bin/yaml2json.pl $< > $@
+

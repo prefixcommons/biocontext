@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/cmungall/biocontext.svg?branch=master)](https://travis-ci.org/cmungall/biocontext)
+
 ## BioContext: JSON-LD Contexts for Bioinformatics Data
 
 The goal is to provide a modular set of [JSON-LD](http://json-ld.org/)

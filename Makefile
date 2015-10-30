@@ -3,7 +3,7 @@ MODS := obo idot idot_nr semweb monarch semweb_vocab ro_vocab uber
 all: $(patsubst %,registry/%_context.jsonld,$(MODS))
 
 install:
-	npm install
+	pip install -r requirements.txt
 
 ## OBO
 ## For now we just clone this from ROBOT; TODO - better way of syncing with OBO
@@ -24,7 +24,7 @@ registry/idot_nr_context.jsonld: registry/idot_context.jsonld registry/obo_conte
 
 ## Generic: derived from manually curated source
 registry/%_context.jsonld: registry/%_context.yaml
-	./bin/yaml2json.pl $< > $@.tmp && mv $@.tmp $@
+	./bin/yaml2json.py $< > $@.tmp && mv $@.tmp $@
 
 ## COMBINED
 ##
@@ -38,3 +38,8 @@ registry/uber_context.jsonld: $(patsubst %,registry/%_context.jsonld,$(MODS))
 
 registry/miriam.ttl:
 	wget http://www.ebi.ac.uk/miriam/main/export/registry.ttl -O $@
+
+## GO
+
+registry/go-db-xrefs.json: ../go-site/metadata/db-xrefs.yaml
+	./bin/yaml2json.pl $< > $@

@@ -43,7 +43,7 @@
 'NCBIGene' : 'http://www.ncbi.nlm.nih.gov/gene/'
 'HGNC' : 'http://www.genenames.org/cgi-bin/gene_symbol_report?hgnc_id=HGNC:'
 'HPRD' : 'http://www.hprd.org/protein/'
-'ENSEMBL' : 'http://identifiers.org/ENSEMBL:'
+'ENSEMBL' : 'http://identifiers.org/ensembl:'
 'miRBase' : 'http://www.mirbase.org/cgi-bin/mirna_entry.pl?acc='
 'MGI': 'http://www.informatics.jax.org/accession/MGI:'  #Note this will work for marker(gene), allele, and references, but not genotype
 'BIOGRID' : 'http://thebiogrid.org/'
@@ -66,7 +66,7 @@
 'TrEMBL' : 'http://www.uniprot.org/uniprot/'
 'PDB' : 'http://identifiers.org/PDB:'
 'NCBIProtein' : 'http://www.ncbi.nlm.nih.gov/protein/'
-'EC' : 'http://identifiers.org/EC:'  #FIXME: Enzyme Commission numbers. Any preferred url that can resolve this?
+'EC' : 'http://identifiers.org/ec-code:'  #FIXME: Enzyme Commission numbers. Any preferred url that can resolve this?
 
 #chemicals
 'CID' : 'http://pubchem.ncbi.nlm.nih.gov/compound/'

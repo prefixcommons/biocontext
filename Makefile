@@ -9,9 +9,12 @@ test: all
 
 ## OBO
 ## For now we just clone this from ROBOT; TODO - better way of syncing with OBO
-## 
+##
 registry/obo_context.jsonld:
 	wget --no-check-certificate http://obofoundry.org/registry/obo_context.jsonld -O $@
+
+registry/minerva_context.jsonld:
+	wget --no-check-certificate https://raw.githubusercontent.com/geneontology/minerva/master/minerva-core/src/main/resources/amigo_context_manual.jsonld -O $@
 
 ## IDENTIFIERS.ORG
 ##
@@ -46,4 +49,3 @@ registry/miriam.ttl:
 
 registry/go-db-xrefs.json: ../go-site/metadata/db-xrefs.yaml
 	./bin/yaml2json.pl $< > $@
-

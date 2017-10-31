@@ -1,4 +1,5 @@
 MODS := obo idot idot_nr semweb monarch semweb_vocab ro_vocab uber
+MODS_WITHOUT_UBER := obo idot idot_nr semweb monarch semweb_vocab ro_vocab
 
 all: $(patsubst %,registry/%_context.jsonld,$(MODS))
 
@@ -26,7 +27,7 @@ registry/idot_context.jsonld: registry/miriam.ttl
 ##
 ## OBO Library takes priority, we subtract OBO from IDOT
 registry/idot_nr_context.jsonld: registry/idot_context.jsonld registry/obo_context.jsonld
-	python ./bin/subtract-context.py $^ > $@.tmp && mv $@.tmp $@
+	python3 ./bin/subtract-context.py $^ > $@.tmp && mv $@.tmp $@
 
 ## Generic: derived from manually curated source
 registry/%_context.jsonld: registry/%_context.yaml
@@ -37,8 +38,8 @@ registry/%_context.jsonld: registry/%_context.yaml
 ## The kitchen sink
 
 UBER = obo idot_nr semweb
-registry/uber_context.jsonld: $(patsubst %,registry/%_context.jsonld,$(MODS))
-	./bin/concat-context.pl $^ > $@.tmp && mv $@.tmp $@
+registry/uber_context.jsonld: $(patsubst %,registry/%_context.jsonld,$(MODS_WITHOUT_UBER))
+	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
 
 ## DEPENDENCIES
 

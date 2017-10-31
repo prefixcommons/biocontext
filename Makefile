@@ -26,7 +26,7 @@ registry/idot_context.jsonld: registry/miriam.ttl
 ##
 ## OBO Library takes priority, we subtract OBO from IDOT
 registry/idot_nr_context.jsonld: registry/idot_context.jsonld registry/obo_context.jsonld
-	./bin/subtract-context.pl $^ > $@.tmp && mv $@.tmp $@
+	python ./bin/subtract-context.py $^ > $@.tmp && mv $@.tmp $@
 
 ## Generic: derived from manually curated source
 registry/%_context.jsonld: registry/%_context.yaml

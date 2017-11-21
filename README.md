@@ -134,8 +134,10 @@ http://purl.obolibrary.org/obo/NCBITaxon_9606
 
 The scope of biocontext is limited to mapping of prefixes and short
 names to URIs. It is not a general purpose registry. It stores no
-metadata about the prefixes used. It reuses information from other
+metadata about the prefixes used. It reuses mappings from other
 registries such as identifiers.org and the OBO library when possible.
+
+PrefixCommons separately harmonizes additional identifier metadata (beyond the mappings alone); this metadata harmonization is instead done in the [data ingest repository](https://github.com/prefixcommons/data-ingest). The sources for prefix metadata are primarily Identifiers.org, Bio2RDF registry, the OBO foundry, and BioPortal.
 
 ## Contributing
 

@@ -1,0 +1,68 @@
+# Deeper dive on these is here: https://docs.google.com/spreadsheets/d/1ob7ZJzcvRiA_X3GSmI3pCgIAEvD9GZpXubyELIsXY3g/edit#gid=0
+
+# Antibody Registry
+'AB': 'https://scicrunch.org/resolver/RRID:AB_'
+
+# Cellosaurus'
+'CVCL': 'https://scicrunch.org/resolver/RRID:CVCL_'
+
+# Mouse Genome Informatics'
+'MGI': 'https://scicrunch.org/resolver/RRID:MGI_'
+
+# Bloomington Drosophila Stock Center'
+'BDSC': 'https://scicrunch.org/resolver/RRID:BDSC_'
+
+# International Mouse Strain Resource'
+'IMSR': ''
+
+# Knock Out Mouse Project
+'KOMP': 'https://scicrunch.org/resolver/RRID:IMSR_KOMP:'
+'TIGM': 'https://scicrunch.org/resolver/RRID:IMSR_TIGM:'
+
+# FlyBase
+'Flybase': 'https://scicrunch.org/resolver/RRID:Flybase_'
+
+# WormBase
+'WB-STRAIN': 'https://scicrunch.org/resolver/RRID:WB-STRAIN_'
+
+# Mutant Mouse Resource Research Centers
+'MMRRC': 'https://scicrunch.org/resolver/RRID:MMRRC_'
+
+# Zebrafish Model Organism Database
+'ZFIN': 'https://scicrunch.org/resolver/RRID:ZFIN_'
+
+# Kyoto DGGR Stock Center
+'DGGR': 'https://scicrunch.org/resolver/RRID:DGGR_'
+
+# Rat Genome Database
+'RGD': 'https://scicrunch.org/resolver/RRID:RGD_'
+
+# Tetrahymena Stock Center
+'TSC': 'https://scicrunch.org/resolver/RRID:TSC_'
+
+# Zebrafish International Resource Center
+'ZIRC': 'https://scicrunch.org/resolver/RRID:ZIRC_'
+
+# National Xenopus Resource
+'NXR': 'https://scicrunch.org/resolver/RRID:NXR_'
+
+# Beta Cell Biology Consortium
+'BCBC': 'https://scicrunch.org/resolver/RRID:BCBC_'
+
+# Xiphophorus Genetic Stock Center
+'XGSC': 'https://scicrunch.org/resolver/RRID:XGSC_'
+
+# Ambystoma Genetic Stock Center
+'AGSC': 'https://scicrunch.org/resolver/RRID:AGSC_'
+
+# National Swine Resource and Research Center
+'NSRRC': 'https://scicrunch.org/resolver/RRID:NSRRC_'
+
+# Sperm Stem Cell Libraries for Biological Research
+'SSCLBR': 'https://scicrunch.org/resolver/RRID:SSCLBR_'
+
+# CWRU School of Medicine Core Facilities
+'CWRU': 'https://scicrunch.org/resolver/RRID:CWRU_'
+
+# SciCrunch Registry
+'SCR': 'https://scicrunch.org/resolver/RRID:SCR_

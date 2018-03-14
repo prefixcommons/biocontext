@@ -1,0 +1,25 @@
+{
+  "_comment": "transcribed from http://api.globalbioticinteractions.org/prefixes on 29 Oct 2016",
+  "@context": {
+    "W": "http://wikipedia.org/wiki/",
+    "NBN": "https://data.nbn.org.uk/Taxa/",
+    "IRMNG": "http://www.marine.csiro.au/mirrorsearch/ir_search.list_species?sp_id=",
+    "GBIF": "http://www.gbif.org/species/",
+    "AFD": "http://www.environment.gov.au/biodiversity/abrs/online-resources/fauna/afd/taxa/",
+    "FBC:SLB:SpecCode": "http://sealifebase.org/summary/",
+    "ENVO": "http://purl.obolibrary.org/obo/ENVO_",
+    "INAT_TAXON": "http://inaturalist.org/taxa/",
+    "INAT": "http://www.inaturalist.org/observations/",
+    "OTT": "https://tree.opentreeoflife.org/opentree/ottol@",
+    "ITIS": "http://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=",
+    "WORMS": "http://www.marinespecies.org/aphia.php?p=taxdetails&id=",
+    "GAME": "https://public.myfwc.com/FWRI/GAME/Survey.aspx?id=",
+    "urn:lsid:biodiversity.org.au:apni.taxon": "http://id.biodiversity.org.au/apni.taxon/",
+    "doi": "http://dx.doi.org/",
+    "NCBI": "https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?id=",
+    "EOL": "http://eol.org/pages/",
+    "IF": "http://www.indexfungorum.org/names/NamesRecord.asp?RecordID=",
+    "BioGoMx": "http://gulfbase.org/biogomx/biospecies.php?species=",
+    "FBC:FB:SpecCode": "http://fishbase.org/summary/"
+  }
+}

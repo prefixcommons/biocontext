@@ -4,15 +4,25 @@ import sys
 
 def main(first_path, rest):
 
+    source_for = {}
     first_context = open_json(first_path)
+    for k in first_context["@context"].keys():
+        source_for[k] = first_path
+        
     for next_path in rest:
 
         next_context = open_json(next_path)
         for k in next_context["@context"].keys():
+            v = next_context["@context"][k]
             if k in first_context["@context"]:
-                print("WARNING: clash for {}".format(k), file=sys.stderr)
+                curr = first_context["@context"][k]
+                if curr != v:
+                    print("WARNING: clash for {}. Was={} [{}], Now={} [{}]".
+                          format(k, curr, source_for[k], v, next_path),
+                          file=sys.stderr)
 
-            first_context["@context"][k] = next_context["@context"][k]
+            first_context["@context"][k] = v
+            source_for[k] = next_path
 
     print(json.dumps(first_context, indent=4))
 

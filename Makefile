@@ -1,9 +1,8 @@
 # Makefile to generate source JSON-LD contexts plus merged contexts
 
-CONTEXTS_WITHOUT_UBER := obo idot idot_nr semweb monarch semweb_vocab ro_vocab
-CONTEXTS := $(CONTEXTS_WITHOUT_UBER) uber
+CONTEXTS := goxrefs obo idot idot_nr semweb monarch semweb_vocab ro_vocab commons
 
-all: $(patsubst %,registry/%_context.jsonld,$(CONTEXTS))
+all: $(patsubst %,registry/%_context.jsonld,$(CONTEXTS)) reports/clashes.txt
 
 # TODO: Dockerize
 install:
@@ -22,19 +21,22 @@ trigger:
 ## We pull from the official OBO registry
 ##
 registry/obo_context.jsonld: trigger
-	wget --no-check-certificate http://obofoundry.org/registry/obo_context.jsonld -O $@
+	wget --no-check-certificate http://obofoundry.org/registry/obo_context.jsonld -O $@ && touch $@
 
 ## Gene Ontology
 ## Minerva
 registry/minerva_context.jsonld:  trigger
-	wget --no-check-certificate https://raw.githubusercontent.com/geneontology/minerva/master/minerva-core/src/main/resources/amigo_context_manual.jsonld -O $@
+	wget --no-check-certificate https://raw.githubusercontent.com/geneontology/minerva/master/minerva-core/src/main/resources/amigo_context_manual.jsonld -O $@ && touch $@
+
+registry/goxrefs_context.jsonld: registry/go-db-xrefs.json 
+	./bin/go-xrefs-to-context.py $< > $@.tmp && mv $@.tmp $@
 
 ## IDENTIFIERS.ORG
 
 ## Step1: Get miriam
 # TODO: this is currently broken
 #registry/miriam.ttl:  trigger
-#	wget --no-check-certificate http://www.ebi.ac.uk/miriam/main/export/registry.ttl -O $@
+#	wget --no-check-certificate http://www.ebi.ac.uk/miriam/main/export/registry.ttl -O $@ && touch $@
 
 ##
 ## Everything from MIRIAM registry
@@ -55,10 +57,14 @@ registry/%_context.jsonld: registry/%_context.yaml
 ##
 ## The kitchen sink
 
-UBER = obo idot_nr semweb
-registry/uber_context.jsonld: $(patsubst %,registry/%_context.jsonld,$(CONTEXTS_WITHOUT_UBER))
+# Highest priority LAST
+COMMONS_SOURCES =  semweb idot_nr obo
+registry/commons_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMMONS_SOURCES))
 	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
 
+SUPERSET_SOURCES =  goxrefs idot semweb monarch semweb_vocab ro_vocab obo
+reports/clashes.txt: $(patsubst %, registry/%_context.jsonld, $(SUPERSET_SOURCES))
+	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
 
 
 ## GO

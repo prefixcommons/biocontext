@@ -72,7 +72,11 @@ The current list is:
  * [idot](registry/idot_context.jsonld) : derived from identifiers-org/MIRIAM registry
  * [idot_nr](registry/idot_nr_context.jsonld) : idot minus OBO
  * [semweb](registry/semweb_context.jsonld) : Standard semantic web prefixes
- * [uber](registry/uber_context.jsonld) : Merger of other contexts
+ * [commons](registry/commons_context.jsonld) : The commons set: OBO + idot_nr + monarch
+
+## Clash Reporting
+
+ * [reports/clashes.txt](reports/clashes.txt)
 
 ## Use in JSON-LD documents
 

@@ -1,6 +1,6 @@
 # Makefile to generate source JSON-LD contexts plus merged contexts
 
-CONTEXTS := goxrefs obo idot idot_nr semweb monarch semweb_vocab ro_vocab commons
+CONTEXTS := pr goxrefs obo idot idot_nr semweb monarch semweb_vocab ro_vocab commons
 
 all: $(patsubst %,registry/%_context.jsonld,$(CONTEXTS)) reports/clashes.txt
 
@@ -38,6 +38,9 @@ registry/monarch_curie_map.yaml:
 registry/monarch_context.jsonld: registry/monarch_curie_map.yaml
 	./bin/curiemap2context.py $< > $@.tmp && mv $@.tmp $@
 
+## PRO
+registry/pr_context.jsonld:
+	./bin/pro-obo2jsonld.pl > $@
 
 ## IDENTIFIERS.ORG
 

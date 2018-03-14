@@ -1,0 +1,2 @@
+WARNING: clash for HGNC. Was=http://purl.obolibrary.org/obo/HGNC_ [registry/minerva_context.jsonld], Now=http://identifiers.org/hgnc/HGNC: [registry/monarch_context.jsonld]
+WARNING: clash for SGD. Was=http://identifiers.org/sgd/ [registry/minerva_context.jsonld], Now=http://identifiers.org/SGD: [registry/monarch_context.jsonld]

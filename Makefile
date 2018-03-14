@@ -31,6 +31,14 @@ registry/minerva_context.jsonld:  trigger
 registry/goxrefs_context.jsonld: registry/go-db-xrefs.json 
 	./bin/go-xrefs-to-context.py $< > $@.tmp && mv $@.tmp $@
 
+## Monarch
+registry/monarch_curie_map.yaml:
+	wget --no-check-certificate https://raw.githubusercontent.com/monarch-initiative/dipper/master/dipper/curie_map.yaml -O $@
+
+registry/monarch_context.jsonld: registry/monarch_curie_map.yaml
+	./bin/curiemap2context.py $< > $@.tmp && mv $@.tmp $@
+
+
 ## IDENTIFIERS.ORG
 
 ## Step1: Get miriam
@@ -49,16 +57,19 @@ registry/goxrefs_context.jsonld: registry/go-db-xrefs.json
 registry/idot_nr_context.jsonld: registry/idot_context.jsonld registry/obo_context.jsonld
 	python3 ./bin/subtract-context.py $^ > $@.tmp && mv $@.tmp $@
 
+
+
 ## Generic: derived from manually curated source
 registry/%_context.jsonld: registry/%_context.yaml
 	./bin/yaml2json.py $< > $@.tmp && mv $@.tmp $@
+
 
 ## COMBINED
 ##
 ## The kitchen sink
 
 # Highest priority LAST
-COMMONS_SOURCES =  semweb idot_nr obo
+COMMONS_SOURCES =  semweb idot_nr monarch obo
 registry/commons_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMMONS_SOURCES))
 	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
 
@@ -66,11 +77,16 @@ SUPERSET_SOURCES =  goxrefs idot semweb monarch semweb_vocab ro_vocab obo
 reports/clashes.txt: $(patsubst %, registry/%_context.jsonld, $(SUPERSET_SOURCES))
 	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
 
+# requires biomake
+reports/clashes-$(A)-$(B).txt: $(patsubst %, registry/%_context.jsonld, $(A) $(B))
+	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
+
+# requires biomake
+reports/clashes-$(A)-$(B)-$(C).txt: $(patsubst %, registry/%_context.jsonld, $(A) $(B) $(C))
+	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
 
 ## GO
 registry/go-db-xrefs.json: ../go-site/metadata/db-xrefs.yaml
 	./bin/yaml2json.pl $< > $@
 
-## Monarch
-registry/monarch-curie_map.yaml:
-	wget --no-check-certificate https://raw.githubusercontent.com/monarch-initiative/dipper/master/dipper/curie_map.yaml
+

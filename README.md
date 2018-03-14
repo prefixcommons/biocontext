@@ -71,6 +71,7 @@ The current list is:
  * [obo](registry/obo_context.jsonld) : derived from the OBO registry
  * [idot](registry/idot_context.jsonld) : derived from identifiers-org/MIRIAM registry
  * [idot_nr](registry/idot_nr_context.jsonld) : idot minus OBO
+ * [goxrefs](registry/goxrefs_context.jsonld) : derived from http://amigo.geneontology.org/xrefs
  * [semweb](registry/semweb_context.jsonld) : Standard semantic web prefixes
  * [commons](registry/commons_context.jsonld) : The commons set: OBO + idot_nr + monarch
 

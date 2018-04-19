@@ -76,6 +76,10 @@ COMMONS_SOURCES =  semweb idot_nr monarch obo
 registry/commons_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMMONS_SOURCES))
 	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
 
+GO_SOURCES =  semweb goxrefs obo
+registry/go_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMMONS_SOURCES))
+	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
+
 SUPERSET_SOURCES =  goxrefs idot semweb monarch semweb_vocab ro_vocab obo
 reports/clashes.txt: $(patsubst %, registry/%_context.jsonld, $(SUPERSET_SOURCES))
 	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
@@ -89,7 +93,10 @@ reports/clashes-$(A)-$(B)-$(C).txt: $(patsubst %, registry/%_context.jsonld, $(A
 	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
 
 ## GO
-registry/go-db-xrefs.json: ../go-site/metadata/db-xrefs.yaml
+## TODO
+registry/go-db-xrefs.yaml:
+	wget --no-check-certificate https://raw.githubusercontent.com/geneontology/go-site/master/metadata/db-xrefs.yaml -O $@
+registry/go-db-xrefs.json: registry/go-db-xrefs.yaml
 	./bin/yaml2json.pl $< > $@
 
 

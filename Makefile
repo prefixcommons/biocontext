@@ -1,6 +1,6 @@
 # Makefile to generate source JSON-LD contexts plus merged contexts
 
-CONTEXTS := pr goxrefs obo idot idot_nr semweb monarch semweb_vocab ro_vocab commons
+CONTEXTS := pr go obo idot idot_nr semweb monarch semweb_vocab ro_vocab commons
 
 all: $(patsubst %,registry/%_context.jsonld,$(CONTEXTS)) reports/clashes.txt
 
@@ -28,7 +28,7 @@ registry/obo_context.jsonld: trigger
 registry/minerva_context.jsonld:  trigger
 	wget --no-check-certificate https://raw.githubusercontent.com/geneontology/minerva/master/minerva-core/src/main/resources/amigo_context_manual.jsonld -O $@ && touch $@
 
-registry/goxrefs_context.jsonld: registry/go-db-xrefs.json 
+registry/go_context.jsonld: registry/go-db-xrefs.json 
 	./bin/go-xrefs-to-context.py $< > $@.tmp && mv $@.tmp $@
 
 ## Monarch
@@ -76,7 +76,11 @@ COMMONS_SOURCES =  semweb idot_nr monarch obo
 registry/commons_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMMONS_SOURCES))
 	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
 
-SUPERSET_SOURCES =  goxrefs idot semweb monarch semweb_vocab ro_vocab obo
+GO_SOURCES =  semweb go obo
+registry/go_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMMONS_SOURCES))
+	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
+
+SUPERSET_SOURCES =  go idot semweb monarch semweb_vocab ro_vocab obo
 reports/clashes.txt: $(patsubst %, registry/%_context.jsonld, $(SUPERSET_SOURCES))
 	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
 
@@ -89,7 +93,10 @@ reports/clashes-$(A)-$(B)-$(C).txt: $(patsubst %, registry/%_context.jsonld, $(A
 	(python3 ./bin/concat-context.py $^ > registry/superset.jsonld) >& $@
 
 ## GO
-registry/go-db-xrefs.json: ../go-site/metadata/db-xrefs.yaml
+## TODO
+registry/go-db-xrefs.yaml:
+	wget --no-check-certificate https://raw.githubusercontent.com/geneontology/go-site/master/metadata/db-xrefs.yaml -O $@
+registry/go-db-xrefs.json: registry/go-db-xrefs.yaml
 	./bin/yaml2json.pl $< > $@
 
 

@@ -18,7 +18,12 @@ def main(fn):
                 if db in pm and pm[db] != url:
                     logging.warn("Replacing {} : {} -> {}".format(db, pm[db], url))
                 pm[db] = url
-                    
+
+    # overwrite if rdf_uri_prefix is known. See https://github.com/geneontology/go-site/issues/617
+    for p in prefixes:
+        if 'rdf_uri_prefix' in p:
+            pm[p['database']] = p['rdf_uri_prefix']
+                
 
     obj = {'@context': pm}
     print(json.dumps(obj, indent=4))

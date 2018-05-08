@@ -77,7 +77,11 @@ registry/commons_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMM
 	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
 
 GO_SOURCES =  semweb go obo
-registry/go_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(COMMONS_SOURCES))
+registry/go_obo_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(GO_SOURCES))
+	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
+
+TRANSLATOR_SOURCES =  semweb monarch go idot_nr obo
+registry/translator_context.jsonld: $(patsubst %, registry/%_context.jsonld, $(TRANSLATOR_SOURCES))
 	python3 ./bin/concat-context.py $^ > $@.tmp && mv $@.tmp $@
 
 SUPERSET_SOURCES =  go idot semweb monarch semweb_vocab ro_vocab obo

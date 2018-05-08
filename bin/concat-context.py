@@ -31,7 +31,7 @@ def convert(files):
                 curr = first_context["@context"][k]
                 check_uri(uri_to_prefix, k, curr)
                 if curr != v:
-                    logging.warning("clash for {}. Was={} [{}], Now={} [{}]".
+                    logging.warning("Prefix clash: {} Was={} [{}], Now={} [{}]".
                                     format(k, curr, prefix_to_uri[k], v, next_path))
 
             first_context["@context"][k] = v
@@ -41,7 +41,7 @@ def convert(files):
 
 def check_uri(m, prefix, uri):
     if uri in m:
-        logging.warning("clash {} is expansion for {} and {}".format(uri, prefix, m[uri]))
+        logging.warning("URI clash: {} is expansion for {} and {}".format(uri, prefix, m[uri]))
     m[uri] = prefix
     
 def open_json(path):

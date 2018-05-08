@@ -1,0 +1,68 @@
+INFO:root:Files: ('registry/go_context.jsonld', 'registry/monarch_context.jsonld')
+INFO:root:CANONICAL FILE: registry/go_context.jsonld
+WARNING:root:URI clash: http://www.ensemblgenomes.org/id/ is expansion for EnsemblPlants and EnsemblProtists
+WARNING:root:URI clash: http://www.ensemblgenomes.org/id/ is expansion for EnsemblFungi and EnsemblPlants
+WARNING:root:URI clash: http://www.ensemblgenomes.org/id/ is expansion for EnsemblMetazoa and EnsemblFungi
+WARNING:root:URI clash: http://www.ensembl.org/id/ is expansion for ENSEMBL_TranscriptID and ENSEMBL_ProteinID
+WARNING:root:URI clash: http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?val= is expansion for RefSeq and NCBI_gi
+WARNING:root:URI clash: http://gowiki.tamu.edu/wiki/index.php/ is expansion for CACAO and GONUTS
+WARNING:root:URI clash: https://github.com/Planteome/plant-environment-ontology/issues/ is expansion for EO_GIT and PECO_GIT
+WARNING:root:URI clash: http://www.ensembl.org/id/ is expansion for ENSEMBL_GeneID and ENSEMBL_TranscriptID
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/BFO_ is expansion for BFO and BFO
+WARNING:root:URI clash: http://identifiers.org/cgd/ is expansion for CGD and CGD
+WARNING:root:Prefix clash: CGD Was=http://identifiers.org/cgd/ [registry/go_context.jsonld], Now=http://ohsu.edu/cgd/ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/CHEBI_ is expansion for CHEBI and CHEBI
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/CL_ is expansion for CL and CL
+WARNING:root:URI clash: http://dx.doi.org/ is expansion for DOI and DOI
+WARNING:root:URI clash: http://www.expasy.org/enzyme/ is expansion for EC and EC
+WARNING:root:Prefix clash: EC Was=http://www.expasy.org/enzyme/ [registry/go_context.jsonld], Now=http://identifiers.org/ec-code/ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/ECO_ is expansion for ECO and ECO
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/EMAPA_ is expansion for EMAPA and EMAPA
+WARNING:root:URI clash: http://identifiers.org/ensembl/ is expansion for ENSEMBL and ENSEMBL
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/FBbt_ is expansion for FBbt and FBbt
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/GO_ is expansion for GO and GO
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/go/references/ is expansion for GO_REF and GO_REF
+WARNING:root:Prefix clash: GO_REF Was=http://purl.obolibrary.org/obo/go/references/ [registry/go_context.jsonld], Now=http://www.geneontology.org/cgi-bin/references.cgi#GO_REF: [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?db=nucleotide&val= is expansion for GenBank and GenBank
+WARNING:root:Prefix clash: GenBank Was=http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?db=nucleotide&val= [registry/go_context.jsonld], Now=http://www.ncbi.nlm.nih.gov/nuccore/ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://identifiers.org/hgnc/ is expansion for HGNC and HGNC
+WARNING:root:Prefix clash: HGNC Was=http://identifiers.org/hgnc/ [registry/go_context.jsonld], Now=http://identifiers.org/hgnc/HGNC: [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/MA_ is expansion for MA and MA
+WARNING:root:URI clash: http://identifiers.org/mgi/ is expansion for MGI and MGI
+WARNING:root:Prefix clash: MGI Was=http://identifiers.org/mgi/ [registry/go_context.jsonld], Now=http://www.informatics.jax.org/accession/MGI: [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://identifiers.org/ncbigene/ is expansion for NCBIGene and NCBIGene
+WARNING:root:Prefix clash: NCBIGene Was=http://identifiers.org/ncbigene/ [registry/go_context.jsonld], Now=http://www.ncbi.nlm.nih.gov/gene/ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://omim.org/entry/ is expansion for OMIM and OMIM
+WARNING:root:Prefix clash: OMIM Was=http://omim.org/entry/ [registry/go_context.jsonld], Now=http://purl.obolibrary.org/obo/OMIM_ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://www.pantherdb.org/panther/lookupId.jsp?id=PTHR is expansion for PAINT_REF and PAINT_REF
+WARNING:root:Prefix clash: PAINT_REF Was=http://www.pantherdb.org/panther/lookupId.jsp?id=PTHR [registry/go_context.jsonld], Now=http://www.geneontology.org/gene-associations/submission/paint/ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://identifiers.org/panther.family/ is expansion for PANTHER and PANTHER
+WARNING:root:Prefix clash: PANTHER Was=http://identifiers.org/panther.family/ [registry/go_context.jsonld], Now=http://www.pantherdb.org/panther/family.do?clsAccession= [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/PATO_ is expansion for PATO and PATO
+WARNING:root:URI clash: http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId= is expansion for PDB and PDB
+WARNING:root:Prefix clash: PDB Was=http://www.rcsb.org/pdb/cgi/explore.cgi?pdbId= [registry/go_context.jsonld], Now=http://identifiers.org/PDB: [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://www.ncbi.nlm.nih.gov/sites/entrez?db=pmc&cmd=search&term= is expansion for PMCID and PMCID
+WARNING:root:Prefix clash: PMCID Was=http://www.ncbi.nlm.nih.gov/sites/entrez?db=pmc&cmd=search&term= [registry/go_context.jsonld], Now=http://www.ncbi.nlm.nih.gov/pmc/ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://www.ncbi.nlm.nih.gov/pubmed/ is expansion for PMID and PMID
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/PR_ is expansion for PR and PR
+WARNING:root:URI clash: http://identifiers.org/pombase/ is expansion for PomBase and PomBase
+WARNING:root:Prefix clash: PomBase Was=http://identifiers.org/pombase/ [registry/go_context.jsonld], Now=http://identifiers.org/PomBase: [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://identifiers.org/rgd/ is expansion for RGD and RGD
+WARNING:root:Prefix clash: RGD Was=http://identifiers.org/rgd/ [registry/go_context.jsonld], Now=http://rgd.mcw.edu/rgdweb/report/gene/main.html?id= [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/RO_ is expansion for RO and RO
+WARNING:root:URI clash: http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?val= is expansion for RefSeq and RefSeq
+WARNING:root:Prefix clash: RefSeq Was=http://www.ncbi.nlm.nih.gov/entrez/viewer.fcgi?val= [registry/go_context.jsonld], Now=http://www.ncbi.nlm.nih.gov/refseq/?term= [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://identifiers.org/sgd/ is expansion for SGD and SGD
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/SO_ is expansion for SO and SO
+WARNING:root:URI clash: http://identifiers.org/tair.locus/ is expansion for TAIR and TAIR
+WARNING:root:Prefix clash: TAIR Was=http://identifiers.org/tair.locus/ [registry/go_context.jsonld], Now=http://identifiers.org/TAIR: [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/UBERON_ is expansion for UBERON and UBERON
+WARNING:root:URI clash: http://identifiers.org/uniprot/ is expansion for UniProtKB and UniProtKB
+WARNING:root:URI clash: http://purl.obolibrary.org/obo/WBPhenotype_ is expansion for WBPhenotype and WBPhenotype
+WARNING:root:URI clash: http://identifiers.org/xenbase/ is expansion for Xenbase and Xenbase
+WARNING:root:URI clash: http://identifiers.org/zfin/ is expansion for ZFIN and ZFIN
+WARNING:root:Prefix clash: ZFIN Was=http://identifiers.org/zfin/ [registry/go_context.jsonld], Now=http://zfin.org/ [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://identifiers.org/dbsnp/ is expansion for dbSNP and dbSNP
+WARNING:root:Prefix clash: dbSNP Was=http://identifiers.org/dbsnp/ [registry/go_context.jsonld], Now=http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs= [registry/monarch_context.jsonld]
+WARNING:root:URI clash: http://identifiers.org/dictybase/ is expansion for dictyBase and dictyBase
+WARNING:root:Prefix clash: dictyBase Was=http://identifiers.org/dictybase/ [registry/go_context.jsonld], Now=http://dictybase.org/gene/ [registry/monarch_context.jsonld]

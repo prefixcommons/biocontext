@@ -172,6 +172,7 @@ WARNING:root:clash http://www.w3.org/2000/01/rdf-schema# is expansion for rdfs a
 WARNING:root:clash http://www.w3.org/1999/02/22-rdf-syntax-ns# is expansion for rdf and rdf
 WARNING:root:clash http://purl.obolibrary.org/obo/BFO_ is expansion for BFO and BFO
 WARNING:root:clash http://purl.obolibrary.org/obo/RO_ is expansion for RO and RO
+WARNING:root:clash for ADW. Was=http://identifiers.org/adw/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/ADW_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/BFO_ is expansion for BFO and BFO
 WARNING:root:clash for BTO. Was=http://identifiers.org/bto/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/BTO_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/CHEBI_ is expansion for CHEBI and CHEBI
@@ -179,6 +180,7 @@ WARNING:root:clash http://purl.obolibrary.org/obo/CL_ is expansion for CL and CL
 WARNING:root:clash http://purl.obolibrary.org/obo/DDANAT_ is expansion for DDANAT and DDANAT
 WARNING:root:clash http://purl.obolibrary.org/obo/ECO_ is expansion for ECO and ECO
 WARNING:root:clash http://purl.obolibrary.org/obo/EMAPA_ is expansion for EMAPA and EMAPA
+WARNING:root:clash for EO. Was=http://identifiers.org/eo/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/EO_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/FBbt_ is expansion for FBbt and FBbt
 WARNING:root:clash for FMA. Was=http://identifiers.org/fma/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/FMA_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/FYPO_ is expansion for FYPO and FYPO
@@ -186,6 +188,7 @@ WARNING:root:clash for GEO. Was=http://identifiers.org/geo/ [registry/idot_conte
 WARNING:root:clash http://purl.obolibrary.org/obo/GO_ is expansion for GO and GO
 WARNING:root:clash http://purl.obolibrary.org/obo/MA_ is expansion for MA and MA
 WARNING:root:clash for MAMO. Was=http://identifiers.org/mamo/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/MAMO_ [registry/obo_context.jsonld]
+WARNING:root:clash for MO. Was=http://identifiers.org/mo/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/MO_ [registry/obo_context.jsonld]
 WARNING:root:clash for MOD. Was=http://identifiers.org/mod/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/MOD_ [registry/obo_context.jsonld]
 WARNING:root:clash for MS. Was=http://identifiers.org/ms/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/MS_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/NCBITaxon_ is expansion for NCBITaxon and taxon
@@ -193,8 +196,10 @@ WARNING:root:clash for OMIT. Was=http://identifiers.org/omit/ [registry/idot_con
 WARNING:root:clash http://purl.obolibrary.org/obo/PATO_ is expansion for PATO and PATO
 WARNING:root:clash for PO. Was=http://identifiers.org/po/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/PO_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/PR_ is expansion for PR and PR
+WARNING:root:clash for RESID. Was=http://identifiers.org/resid/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/RESID_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/RO_ is expansion for RO and RO
 WARNING:root:clash for SBO. Was=http://identifiers.org/sbo/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/SBO_ [registry/obo_context.jsonld]
 WARNING:root:clash http://purl.obolibrary.org/obo/SO_ is expansion for SO and SO
 WARNING:root:clash http://purl.obolibrary.org/obo/UBERON_ is expansion for UBERON and UBERON
 WARNING:root:clash for VARIO. Was=http://identifiers.org/vario/ [registry/idot_context.jsonld], Now=http://purl.obolibrary.org/obo/VARIO_ [registry/obo_context.jsonld]
+WARNING:root:clash http://purl.obolibrary.org/obo/WBPhenotype_ is expansion for WBPhenotype and WBPhenotype

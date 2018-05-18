@@ -165,7 +165,7 @@
         "CAS": "http://identifiers.org/cas/", 
         "H-invDB_locus": "http://www.h-invitational.jp/hinv/spsoup/locus_view?hix_id=", 
         "UM-BBD_ruleID": "http://eawag-bbd.ethz.ch/servlets/rule.jsp?rule=", 
-        "taxon": "http://purl.obolibrary.org/obo/NCBITaxon_", 
+        "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_", 
         "ComplexPortal": "https://www.ebi.ac.uk/complexportal/complex/", 
         "JSTOR": "http://www.jstor.org/stable/", 
         "GRIMS": "https://www.genesys-pgr.org/acn/search2?q=IRGC+", 

@@ -17,6 +17,9 @@ def main(fn):
     prefixes = json.load(f)
     for p in prefixes:
         db = p['database']
+        if db == 'taxon':
+            db = 'NCBITaxon'
+            p['database'] = db
         for e in p.get('entity_types',[]):
             u = e.get('url_syntax','')
             if u.endswith(EXAMPLE):

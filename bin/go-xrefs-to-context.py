@@ -1,4 +1,10 @@
 #!/usr/bin/python
+"""
+Convert GO db-xrefs.yaml file
+
+Give priority to entries explicitly designated rdf_uri_prefix
+"""
+
 import json
 import sys
 import logging
@@ -23,6 +29,21 @@ def main(fn):
     for p in prefixes:
         if 'rdf_uri_prefix' in p:
             pm[p['database']] = p['rdf_uri_prefix']
+
+    rmap = {}
+    for p,uri in pm.items():
+        if uri in rmap:
+            existing_prefix = rmap[uri]
+            if len(existing_prefix) > len(p):
+                logging.info("Replacing {} -> {} with {} -> {} //1".format(existing_prefix, uri, p, uri))
+                del pm[existing_prefix]
+                rmap[uri] = p
+            else:
+                logging.info("Replacing {} -> {} with {} -> {} //2".format(p, uri, existing_prefix, uri))
+                del pm[p]
+        else:
+            rmap[uri] = p
+                
                 
 
     obj = {'@context': pm}
@@ -30,7 +51,7 @@ def main(fn):
         
 
 def usage():
-    print("subtract-context.py path/to/context1.jsonld path/to/context2.jsonld")
+    print("go-xrefs-to-context.py db-xrefs.yaml")
 
 if __name__ == "__main__":
     if len(sys.argv) > 2:

@@ -45,14 +45,13 @@ registry/pr_context.jsonld:
 ## IDENTIFIERS.ORG
 
 ## Step1: Get miriam
-# TODO: this is currently broken
-#registry/miriam.ttl:  trigger
-#	wget --no-check-certificate http://www.ebi.ac.uk/miriam/main/export/registry.ttl -O $@ && touch $@
+registry/miriam.ttl:  trigger
+	wget --no-check-certificate http://www.ebi.ac.uk/miriam/main/export/registry.ttl -O $@ && touch $@
 
 ##
 ## Everything from MIRIAM registry
-#registry/idot_context.jsonld: registry/miriam.ttl
-#	 ./bin/miriam2jsonld.pl $< > $@
+registry/idot_context.jsonld: registry/miriam.ttl
+	 ./bin/miriam2jsonld.pl $< > $@
 
 ## NON-REDUNDANT IDOT
 ##

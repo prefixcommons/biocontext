@@ -95,7 +95,7 @@
         "TGD_LOCUS": "http://db.ciliate.org/cgi-bin/locus.pl?locus=", 
         "MA": "http://purl.obolibrary.org/obo/MA_", 
         "UniProtKB": "http://identifiers.org/uniprot/", 
-        "MGI": "http://identifiers.org/mgi/MGI:", 
+        "MGI": "http://identifiers.org/mgi/", 
         "GRINDesc": "https://npgsweb.ars-grin.gov/gringlobal/descriptordetail.aspx?id=", 
         "DDANAT": "http://purl.obolibrary.org/obo/DDANAT_", 
         "RAP-DB": "http://rapdb.dna.affrc.go.jp/tools/search/run?id=on&attr=desc&attr=cgs&attr=cgn&attr=cgss&attr=cgns&attr=rgss&attr=rgns&keyword=", 

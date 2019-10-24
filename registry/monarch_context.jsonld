@@ -178,7 +178,7 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "sheepQTL": "https://www.animalgenome.org/cgi-bin/QTLdb/OA/qdetails?QTL_ID=",
-        "skos": "https://www.w3.org/TR/skos-reference/#",
+        "skos": "http://www.w3.org/2004/02/skos/core#",
         "xml": "http://www.w3.org/XML/1998/namespace",
         "xsd": "http://www.w3.org/2001/XMLSchema#"
     }

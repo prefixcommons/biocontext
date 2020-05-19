@@ -7,6 +7,7 @@
         "AQTLTrait": "http://identifiers.org/animalqtltrait/",
         "BFO": "http://purl.obolibrary.org/obo/BFO_",
         "BIOGRID": "http://thebiogrid.org/",
+        "biolink" : "https://w3id.org/biolink/vocab/",
         "BNODE": "https://monarchinitiative.org/.well-known/genid/",
         "BT": "http://c.biothings.io/#",
         "CCDS": "http://www.ncbi.nlm.nih.gov/CCDS/CcdsBrowse.cgi?REQUEST=CCDS&DATA=",

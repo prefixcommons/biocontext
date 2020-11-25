@@ -150,7 +150,7 @@
         "WBbt": "http://purl.obolibrary.org/obo/WBbt_",
         "WD_Entity": "https://www.wikidata.org/wiki/",
         "WD_Prop": "https://www.wikidata.org/wiki/Property:",
-        "WormBase": "https://www.wormbase.org/get?name=",
+        "WormBase": "https://identifiers.org/wb/",
         "XAO": "http://purl.obolibrary.org/obo/XAO_",
         "XCO": "http://purl.obolibrary.org/obo/XCO_",
         "Xenbase": "http://www.xenbase.org/gene/showgene.do?method=display&geneId=",

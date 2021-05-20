@@ -484,7 +484,7 @@
     "NONCODEV4.GENE": "http://identifiers.org/noncodev4.gene/",
     "WIKIGENES": "http://identifiers.org/wikigenes/",
     "GWASCENTRAL.STUDY": "http://identifiers.org/gwascentral.study/",
-    "NCBIGENE": "http://identifiers.org/ncbigene/",
+    "NCBIGene": "http://identifiers.org/ncbigene/",
     "GRID": "http://identifiers.org/grid/",
     "MP": "http://identifiers.org/mp/",
     "SIDER.EFFECT": "http://identifiers.org/sider.effect/",

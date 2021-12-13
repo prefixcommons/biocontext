@@ -34,7 +34,7 @@
         "DrugBank": "http://www.drugbank.ca/drugs/",
         "EC": "http://www.enzyme-database.org/query.php?ec=",
         "ECO": "http://purl.obolibrary.org/obo/ECO_",
-        "EFO": "http://purl.obolibrary.org/obo/EFO_",
+        "EFO": "http://www.ebi.ac.uk/efo/EFO_",
         "EMAPA": "http://purl.obolibrary.org/obo/EMAPA_",
         "EMMA": "https://www.infrafrontier.eu/search?keyword=EM:",
         "ENSEMBL": "http://ensembl.org/id/",

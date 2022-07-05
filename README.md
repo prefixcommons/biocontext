@@ -1,4 +1,5 @@
-[![Build Status](https://travis-ci.org/cmungall/biocontext.svg?branch=master)](https://travis-ci.org/cmungall/biocontext)
+[![DOI](https://zenodo.org/badge/13996/prefixcommons/biocontext.svg)](https://zenodo.org/badge/latestdoi/13996/prefixcommons/biocontext)
+
 
 ## BioContext: JSON-LD Contexts for Bioinformatics Data
 

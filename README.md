@@ -1,5 +1,8 @@
 [![DOI](https://zenodo.org/badge/13996/prefixcommons/biocontext.svg)](https://zenodo.org/badge/latestdoi/13996/prefixcommons/biocontext)
 
+__Update 2022-10-25__
+
+The functionality of the biocontext repo is being subsumed into https://github.com/linkml/prefixmaps/
 
 ## BioContext: JSON-LD Contexts for Bioinformatics Data
 

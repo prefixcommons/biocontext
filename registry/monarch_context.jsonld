@@ -93,7 +93,7 @@
         "MonarchData": "https://data.monarchinitiative.org/ttl/",
         "NBO": "http://purl.obolibrary.org/obo/NBO_",
         "NCBIAssembly": "http://www.ncbi.nlm.nih.gov/assembly/",
-        "NCBIGene": "http://www.ncbi.nlm.nih.gov/gene/",
+        "NCBIGene": "https://www.ncbi.nlm.nih.gov/gene/",
         "NCBIGenome": "http://www.ncbi.nlm.nih.gov/genome/",
         "NCBIProtein": "http://www.ncbi.nlm.nih.gov/protein/",
         "NCBITaxon": "http://purl.obolibrary.org/obo/NCBITaxon_",

@@ -7,7 +7,7 @@
   },
   "dependencies": {
     "js-yaml": "*",
-    "express": "3.4.6",
+    "express": "4.19.2",
     "jade": "*"
   }
 }
